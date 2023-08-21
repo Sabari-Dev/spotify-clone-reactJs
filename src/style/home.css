@@ -1,0 +1,392 @@
+.home-page {
+  color: aliceblue;
+  display: flex;
+}
+.left-side {
+  width: 200px;
+  height: 100vh;
+  background: rgba(148, 145, 145, 0.317);
+  backdrop-filter: blur(5px);
+  padding: 10px 5px;
+}
+
+.middle-side {
+  color: aliceblue;
+  width: calc(100vw - 200px);
+  height: 100vh;
+}
+
+/* Left side */
+/* title */
+.left-container .title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5px 10px;
+}
+.left-container .title i {
+  font-size: 20px;
+  cursor: pointer;
+}
+.left-container .title .name {
+  font-size: 20px;
+  font-weight: bold;
+  font-family: "Borel", cursive;
+  margin-right: 30px;
+}
+.title .logo i {
+  color: rgb(23, 238, 23);
+  font-size: 30px;
+}
+/* search bar */
+/* .search-bar {
+  margin-bottom: 20px;
+}
+.search-bar input {
+  border: 1px solid gray;
+  background: rgba(113, 111, 111, 0.288);
+  padding: 10px 5px;
+  padding-right: 20px;
+  border-radius: 10px;
+  color: aliceblue;
+} */
+/* menu */
+.menus {
+  padding: 10px;
+}
+.menus .menu-title {
+  list-style: none;
+  padding-bottom: 15px;
+  font-family: "Josefin Sans", sans-serif;
+}
+.menu-title a {
+  text-decoration: none;
+  color: rgb(154, 154, 154);
+}
+.menus .menu-title {
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-weight: 500;
+  cursor: pointer;
+  color: rgb(154, 154, 154);
+}
+.menu-heading,
+.listHead {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-family: "Josefin Sans", sans-serif;
+  margin-top: 20px;
+}
+
+.menus .menu-title i {
+  font-size: 18px;
+  margin-right: 13px;
+}
+.menus .menu-title::before {
+  content: "";
+  height: 80%;
+  /* padding: 3px; */
+  margin-left: -15px;
+  margin-right: 10px;
+  border-radius: 10px;
+  background-color: rgb(23, 238, 23);
+}
+.menus .menu-title:hover::before,
+.menus .menu-title.active::before {
+  padding: 3px;
+  transition: 0.3s;
+}
+.menus .menu-title a:hover,
+.menus .menu-title a.active {
+  color: aliceblue;
+  font-weight: 700;
+  transition: 0.3s;
+}
+
+.listHead {
+  display: flex;
+  justify-content: space-between;
+}
+.listHead i {
+  font-size: 20px;
+  cursor: pointer;
+}
+.play-lists {
+  height: 150px;
+  overflow-y: scroll;
+  color: rgb(154, 154, 154);
+}
+.listName {
+  display: flex;
+  padding: 5px;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.listName i {
+  margin-right: 10px;
+}
+.listName:hover {
+  color: aliceblue;
+  transition: 0.3s;
+}
+.listName i:nth-of-type(1):hover {
+  color: rgb(255, 32, 32);
+  transition: 0.3s;
+}
+.logout .logout-btn {
+  position: absolute;
+  bottom: 0;
+  text-decoration: none;
+  color: rgb(86, 86, 86);
+  font-family: "Josefin Sans", sans-serif;
+  padding: 5px 15px;
+  background-color: aliceblue;
+  margin-left: 20px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+.logout .logout-btn:hover {
+  box-shadow: 0px 0px 8px aliceblue;
+  border: 1px solid rgb(86, 86, 86);
+}
+.logout .logout-btn i {
+  margin-left: 10px;
+}
+/* middle page */
+
+.middle-page {
+  border: 1px solid gray;
+  height: 100vh;
+  background: rgba(103, 103, 103, 0.34);
+  backdrop-filter: blur(5px);
+  transition: 1s cubic-bezier(0.01, 0.82, 0.33, 0.97);
+}
+
+/* Middle Page */
+
+/* banner */
+.banner {
+  border: 1px solid gray;
+  height: 250px;
+  background: rgb(239, 239, 239);
+  background: linear-gradient(
+    180deg,
+    rgba(239, 239, 239, 0.3479516806722689) 14%,
+    rgba(45, 25, 204, 1) 70%
+  );
+}
+
+.album-banner {
+  display: flex;
+  margin: auto 20px;
+  margin-top: 35px;
+  justify-content: space-between;
+}
+.album-banner .album-content {
+  margin-left: 10px;
+  margin-top: 40px;
+  font-family: "Kanit", sans-serif;
+}
+.album-banner .album-img img {
+  height: 200px;
+  width: 200px;
+}
+.album-content h4 {
+  margin-bottom: 20px;
+}
+.album-content .likeView {
+  font-size: 15px;
+  padding-top: 10px;
+  color: rgb(154, 154, 154);
+  word-spacing: 3px;
+}
+.album-content .likeView span {
+  margin: 0 10px;
+}
+.album-content .likeView span i {
+  padding-right: 5px;
+}
+
+/* Songs List */
+.songs-list .list-head ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background: rgba(70, 69, 69, 0.845);
+}
+.songs-list .list-head ul li {
+  list-style: none;
+  font-family: "Kanit", sans-serif;
+  width: 20vw;
+  text-align: center;
+}
+.songs {
+  overflow-y: scroll;
+  height: 200px !important;
+  font-family: sans-serif;
+}
+.song {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 30px;
+  background-color: gray;
+  border: 1px solid rgb(67, 66, 66);
+}
+.song:hover {
+  background-color: rgb(70, 69, 69);
+  border: 1px solid rgb(155, 153, 153);
+  cursor: pointer;
+  box-shadow: 0px 0px 10px rgb(69, 69, 69);
+}
+.song li {
+  list-style: none;
+  width: 20vw;
+  text-align: center;
+}
+.song-url {
+  display: flex;
+  justify-content: space-between;
+}
+.song-details {
+  text-align: left;
+  padding-top: 5px;
+  width: 13vw;
+  margin-left: 3px;
+}
+.song-details .singer {
+  font-size: 13px;
+  text-decoration: underline;
+  color: rgb(199, 199, 199);
+  padding-top: 3px;
+}
+
+/* player-page */
+.player-page {
+  width: 80vw;
+}
+.right-side {
+  font-size: 20px;
+  height: 100vh;
+}
+.right-side .top {
+  display: block;
+  padding: 20px 5px;
+  text-align: center;
+  height: 85vh;
+}
+.right-side p {
+  font-size: 14px;
+}
+.right-side .bottom {
+  display: block;
+  text-align: center;
+  padding: 20px 5px;
+}
+.right-side .top p:hover,
+.right-side .bottom:hover {
+  color: rgb(23, 238, 23);
+  cursor: pointer;
+  transition: 0.3s;
+}
+@media screen and (max-width: 769px) {
+  /* banner */
+  .banner {
+    height: 30vh;
+  }
+  .album-banner .album-img img {
+    height: 100px;
+    width: 100px;
+  }
+  .album-banner {
+    margin: 0px 10px;
+  }
+  .album-banner .album-content {
+    margin-left: 10px;
+    margin-top: 5px;
+  }
+  .album-content h4 {
+    margin-bottom: 5px;
+  }
+  .album-content .likeView {
+    font-size: 14px;
+    padding-top: 0px;
+  }
+  .album-content .likeView span {
+    margin: 0 10px;
+  }
+  .songs {
+    height: 45vh !important;
+  }
+}
+@media screen and (max-width: 430px) {
+  .left-side {
+    width: 10vw;
+  }
+  .banner {
+    height: 30vh;
+  }
+  .songs {
+    height: 50vh;
+  }
+  .player-page {
+    width: 90vw;
+    height: 20vh;
+  }
+  .middle-side {
+    width: calc(100vw - 10vw);
+  }
+  .menu-title span {
+    display: none;
+  }
+  .left-container .title {
+    margin-left: 2px;
+  }
+  .left-container .title .name,
+  .left-container .title .menu-bar {
+    display: none;
+  }
+  .menu-heading {
+    font-size: 10px;
+  }
+  .logout .logout-btn {
+    position: absolute;
+    bottom: 0;
+    margin-left: 0;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  .logout-btn span {
+    display: none;
+  }
+  .logout .logout-btn i {
+    margin-left: 0;
+  }
+  .banner {
+    height: 100px;
+  }
+  .album-banner .album-img img {
+    height: 80px;
+    width: 80px;
+  }
+  .album-content .content {
+    display: none;
+  }
+  .list-head ul li:nth-child(3),
+  .song li:nth-child(3) {
+    display: none;
+  }
+  .songs {
+    height: calc(100vh - 200px);
+  }
+  .list-head ul li,
+  .song li {
+    width: 40vw;
+  }
+  .song .song-details {
+    width: 30vw;
+  }
+  .player-page {
+    height: 100px;
+  }
+}

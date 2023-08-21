@@ -1,0 +1,94 @@
+.song-add {
+  position: absolute;
+  z-index: 2;
+  left: 30%;
+  color: aliceblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+form {
+  min-height: 50vh;
+  min-width: 40vw;
+  margin: 0 auto;
+  background-color: rgba(217, 222, 219, 0.505);
+  backdrop-filter: blur(15px);
+  border-radius: 10px;
+  /* text-align: center; */
+  font-family: "Work Sans", sans-serif;
+  padding: 20px 50px;
+}
+form h2 {
+  font-family: "Comfortaa", cursive;
+  margin-bottom: 20px;
+  color: rgb(24, 217, 91);
+  text-shadow: 0px 0px 5px rgb(30, 215, 96);
+  text-align: center;
+}
+form label {
+  display: block;
+  color: rgb(0, 0, 0);
+}
+form input,
+#imageUrl,
+#audioUrl {
+  width: 30vw;
+  padding: 10px 5px;
+  border-radius: 5px;
+  border: none;
+  font-family: "Work Sans", sans-serif;
+  margin: 5px 0;
+}
+form button {
+  padding: 10px 30px;
+  margin-top: 10px;
+  background-color: rgb(24, 217, 91);
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  color: white;
+  font-family: "Work Sans", sans-serif;
+  font-size: 16px;
+  transition: 0.3s ease-in-out;
+  text-align: center;
+  margin: 0 10px;
+}
+form button:hover {
+  box-shadow: 0px 0px 10px rgb(40, 236, 109);
+  padding: 12px 34px;
+}
+@media screen and (max-width: 769px) {
+  form input {
+    width: 60vw;
+  }
+  .song-add {
+    left: 10%;
+    top: 50px;
+  }
+  form h2 {
+    margin-bottom: 10px;
+  }
+  form {
+    overflow-y: scroll;
+    height: 100vh;
+    margin: 0;
+    padding: 20px;
+  }
+  .song-add {
+    top: 5px;
+  }
+}
+@media screen and(max-width:430px) {
+  form input {
+    width: 70vw;
+  }
+  .song-add {
+    left: 10px;
+    top: 5px;
+  }
+  form button {
+    margin: 0;
+    padding: 5px 10px;
+  }
+}
