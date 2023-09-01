@@ -45,7 +45,7 @@ export const Middlepage = () => {
     };
     getSongs();
   }, [songs]);
-  // console.log(songs);
+
   // const id = auth.currentUser.uid;
 
   return (

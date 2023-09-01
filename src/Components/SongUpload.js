@@ -4,6 +4,7 @@ import { ref, getDownloadURL, uploadBytes } from "firebase/storage";
 import { Timestamp, addDoc, collection } from "firebase/firestore";
 import "../style/songAdd.css";
 import { useNavigate } from "react-router-dom";
+import { v4 as uuidv4 } from "uuid";
 
 const SongUpload = () => {
   const [songAdd, setSongAdd] = useState({
@@ -20,6 +21,9 @@ const SongUpload = () => {
     imageLink: "",
     loading: false,
   });
+
+  const navigate = useNavigate();
+  const uniqueId = uuidv4();
 
   const handleChange = (e) => {
     e.preventDefault();
@@ -45,7 +49,7 @@ const SongUpload = () => {
         const snap = await uploadBytes(imageRef, imageUrl);
         imgUrl = await getDownloadURL(ref(storage, snap.ref.fullPath));
 
-        console.log(imgUrl);
+        // console.log(imgUrl);
         // Upload audio file
         let audUrl = "";
         const audioRef = ref(
@@ -55,7 +59,7 @@ const SongUpload = () => {
         const snapAud = await uploadBytes(audioRef, audioUrl);
         audUrl = await getDownloadURL(ref(storage, snapAud.ref.fullPath));
 
-        console.log(audUrl);
+        // console.log(audUrl);
 
         if (imgUrl && audUrl) {
           setPlayList((prev) => ({
@@ -74,19 +78,19 @@ const SongUpload = () => {
       console.log(error);
     }
   };
-  const navigate = useNavigate();
 
   const handleFormSubmit = async (e) => {
     e.preventDefault();
 
-    console.log(songAdd);
-    console.log(playList);
+    // console.log(songAdd);
+    // console.log(playList);
     setSongAdd({ ...songAdd, loading: true });
     let songs = { ...songAdd, ...playList };
 
     await addDoc(collection(db, "album"), {
       ...songs,
       createdAt: Timestamp.fromDate(new Date()),
+      id: uniqueId,
     });
     setSongAdd({
       name: "",

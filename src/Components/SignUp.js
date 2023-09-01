@@ -166,7 +166,6 @@ Allows special characters`;
         {errors.confirmPassword && (
           <p className="message">{errors.confirmPassword}</p>
         )}
-
         <p>
           <input
             type="tel" // Use "tel" type for mobile numbers

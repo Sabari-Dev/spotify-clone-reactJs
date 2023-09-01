@@ -79,14 +79,6 @@ const AudioPlayer = ({ song, image, like, id }) => {
     setPlay(!prevValue);
   };
 
-  // const deleteSong = async () => {
-  //   if (window.confirm("Are sure to delete this song")) {
-  //     await deleteDoc(doc(db, "album", id));
-  //     image = null;
-  //     song = null;
-  //   }
-  // };
-
   const deleteSong = async () => {
     if (window.confirm("Are you sure you want to delete this song?")) {
       try {
