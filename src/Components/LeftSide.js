@@ -1,12 +1,11 @@
-import React, { useEffect, useState } from "react";
-
+import React from "react";
 import { BsSpotify, BsDownload, BsFillHeartFill } from "react-icons/bs";
 import { HiHome } from "react-icons/hi";
 import { FiUpload } from "react-icons/fi";
 import { FaUser } from "react-icons/fa";
 
 import { GrLogout } from "react-icons/gr";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { auth } from "../Config/Config";
 
 const LeftSide = () => {
@@ -68,6 +67,7 @@ const LeftSide = () => {
               href="https://www.spotify.com/us/download/windows/"
               target="_blank"
               className="installApp"
+              rel="noreferrer"
             >
               <i>
                 <BsDownload />
