@@ -23,7 +23,7 @@ const Profile = () => {
   const navigate = useNavigate();
   const params = useParams();
   const { id } = params;
-  const userAuth = auth.currentUser;
+  // const userAuth = auth.currentUser;
   useEffect(() => {
     getDoc(doc(db, "users", id))
       .then((docSnap) => {
