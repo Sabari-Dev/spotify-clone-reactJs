@@ -1,11 +1,5 @@
 import React, { useEffect, useState } from "react";
-import {
-  BsMusicNote,
-  BsFillHeartFill,
-  BsSuitHeart,
-  BsSuitHeartFill,
-  BsTrash3Fill,
-} from "react-icons/bs";
+import { BsMusicNote, BsFillHeartFill } from "react-icons/bs";
 import img from "../images/album.jpg";
 import AudioPlayer from "./AudioPlayer";
 import { collection, getDocs } from "firebase/firestore";
