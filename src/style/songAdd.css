@@ -26,6 +26,22 @@ form h2 {
   text-shadow: 0px 0px 5px rgb(30, 215, 96);
   text-align: center;
 }
+form .heading {
+  display: flex;
+  justify-content: space-around;
+}
+form .heading i {
+  color: rgb(24, 217, 91);
+  font-size: 23px;
+  margin-top: 5px;
+  margin-left: 70px;
+  transition: 0.3s;
+}
+form .heading i:hover {
+  color: red;
+  cursor: pointer;
+  font-size: 25px;
+}
 form label {
   display: block;
   color: rgb(0, 0, 0);
