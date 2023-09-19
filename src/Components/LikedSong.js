@@ -1,20 +1,21 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import {
   collection,
   query,
   where,
   getDocs,
   updateDoc,
-  doc,
 } from "firebase/firestore";
 import { db } from "../Config/Config";
 import AudioPlayer from "./AudioPlayer";
 import "../style/likedSong.css";
 import { BsFillHeartbreakFill } from "react-icons/bs";
+import { AiOutlineClose } from "react-icons/ai";
 
 const LikedSong = () => {
   const [likeSongs, setLikeSongs] = useState([]);
-
+  const navigate = useNavigate();
   const [songImg, setSongImg] = useState({
     song: "",
     image: "",
@@ -65,9 +66,20 @@ const LikedSong = () => {
       console.warn("Document not found for unlike action.");
     }
   };
+  const handleClose = () => {
+    navigate("/home");
+  };
   return (
     <div className="likedSongs">
-      <h2 className="heading">Liked Songs</h2>
+      <div className="head">
+        <h2 className="heading">Liked Songs</h2>
+        <div className="close-btn">
+          <i onClick={handleClose}>
+            <AiOutlineClose />
+          </i>
+        </div>
+      </div>
+
       <div className="list-head">
         <ul key="123">
           <li className="title-list" key="1">
