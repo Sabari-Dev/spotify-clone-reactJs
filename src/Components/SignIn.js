@@ -31,7 +31,7 @@ const SignIn = () => {
       if (Object.keys(validationErrors).length === 0) {
         await signInWithEmailAndPassword(auth, email, password)
           .then((userCredential) => {
-            let userId = userCredential.user.uid;
+            // let userId = userCredential.user.uid;
             // console.log(userId);
             setCheckUser({
               email: "",
