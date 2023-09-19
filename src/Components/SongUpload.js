@@ -5,6 +5,7 @@ import { Timestamp, addDoc, collection } from "firebase/firestore";
 import "../style/songAdd.css";
 import { useNavigate } from "react-router-dom";
 import { v4 as uuidv4 } from "uuid";
+import { AiOutlineClose } from "react-icons/ai";
 
 const SongUpload = () => {
   const [songAdd, setSongAdd] = useState({
@@ -111,11 +112,20 @@ const SongUpload = () => {
       navigate("/home");
     }
   };
+  const handleClose = () => {
+    navigate("/home");
+  };
 
   return (
     <div className="song-add">
       <form>
-        <h2>Upload your Song</h2>
+        <div className="heading">
+          <h2>Upload your Song</h2>
+          <i onClick={handleClose}>
+            <AiOutlineClose />
+          </i>
+        </div>
+
         <label htmlFor="name">Song Name:</label>
         <input
           type="text"
