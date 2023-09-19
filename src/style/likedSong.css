@@ -30,6 +30,22 @@
   padding-left: 15%;
   text-align: center;
 }
+.likedSongs .head {
+  display: flex;
+  justify-content: space-between;
+}
+.likedSongs .head .close-btn {
+  padding: 10px;
+}
+.likedSongs .head .close-btn:hover {
+  cursor: pointer;
+}
+.likedSongs .head .close-btn i {
+  color: rgb(24, 217, 91);
+  text-shadow: 0px 0px 5px rgb(30, 215, 96);
+  font-size: 23px;
+}
+
 .likedSongs .heading {
   font-family: "Comfortaa", cursive;
   margin: 10px 0;
@@ -37,6 +53,7 @@
   text-shadow: 0px 0px 5px rgb(30, 215, 96);
   text-align: center;
 }
+
 .songs-page ul .like {
   padding-left: 30px;
 }
